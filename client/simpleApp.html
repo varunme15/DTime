@@ -1,0 +1,65 @@
+
+ 
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+<title>Reverse Geocoding</title> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript"> 
+ 
+</script> 
+</head> 
+<body > 
+ <input type="button" class="startButton" value="CheckVitamin" /> 
+
+
+<div id="template">
+	
+	
+ 	  {{> list}}
+ 	  
+  
+
+
+</div>
+</body> 
+<template name="list">
+  <div>
+  {{#with tasks}}
+    {{#if count}}
+    	<div id="result" class="table-responsive">
+      <table class='table-bordered table-hover table-condensed'>
+        <caption>Result</caption>
+    		<thead>
+          <tr>
+    		<th>Times</th>
+    		<th>Angle</th>
+    		</tr>	
+        </thead>
+        <tbody>
+        {{#each this}}
+        
+        <tr>	
+          <td>{{time}}</td>
+          <td>{{angle}}</td>
+        </tr>
+    	
+        {{/each}}
+      </tbody>
+        </table>
+      </div>
+    {{else}}
+      <li class="placeholder">Seems like today is not the right day</li>
+    {{/if}}
+  {{/with}}
+  </div>
+</template>
+<!--<template name="list">
+  <ul>
+  {{#each tasks}}
+    <li>{{}}</li>
+  {{else}}
+    <li class="placeholder">There are no items in this list.</li>
+  {{/each}}
+  </ul>
+</template>-->

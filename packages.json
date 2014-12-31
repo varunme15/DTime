@@ -1,0 +1,10 @@
+{
+   
+   "express": "3.4.8",
+    "cheerio": "0.0.3",
+    "timezoner": "0.1.9",
+    "http": "0.0.0",
+    "request": "2.51.0",
+    "wsscraper": "0.0.1",
+    "underscore": "1.7.0"
+}
